@@ -14,19 +14,22 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/status">Status</a></li>
                 <li><a href="/clients">Clients</a></li>
+                <li><a href="/settings">Settings</a></li>
             </ul>
         </nav>
     </header>
     <main class="content">
         <h2>System Status</h2>
-        <p>Chip Model: <strong>ESP32-C6</strong></p>
-        <p>Chip Revision: <strong>1</strong></p>
-        <p>Free Heap: <strong>512KB</strong></p>
-        <p>Uptime: <strong>2 Hours</strong></p>
+        <p>Chip: <strong id="chip">Fetching...</strong></p>
+        <p>Revision: <strong id="revision">Fetching...</strong></p>
+        <p>Features: <strong id="features">Fetching...</strong></p>
+        <p>Flash Size: <strong id="flash">Fetching...</strong></p>
+        <p>Uptime: <strong id="uptime">Fetching...</strong></p>
+        <p>Free Heap: <strong id="heap">Fetching...</strong></p>
     </main>
+    
     <footer>
         <p>&copy; 2024 IoT Gateway | Designed with ❤️</p>
     </footer>
 </body>
 </html>
-

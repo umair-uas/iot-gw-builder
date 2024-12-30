@@ -9,7 +9,11 @@ idf_component_register(
                    "../html/index.html"
                    "../html/status.html"
                    "../html/clients.html"
+                    "../html/settings.html"
+                   "../html/css/styles.css"
+                   "../html/js/app.js"
     REQUIRES esp_wifi esp_event nvs_flash driver led_strip esp_https_server json esp_timer
+    PRIV_REQUIRES spi_flash
 
   
 )

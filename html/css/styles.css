@@ -1,119 +1,113 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-header.navbar {
-    background-color: #007bff
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-header.navbar h1 {
-    margin: 0;
+.navbar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-header.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.navbar nav ul li {
+  margin: 0 10px;
 }
 
-header.navbar ul li {
-    margin-left: 15px;
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-header.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header.navbar ul li a:hover {
-    text-decoration: underline;
+.navbar nav ul li a:hover {
+  text-decoration: underline;
 }
 
 .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #007bff;
-    color: white;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.cards {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
-    margin-top: 0;
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
 }
 
-.card a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
 }
 
-.card a:hover {
-    text-decoration: underline;
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }
 
 footer {
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 footer p {
-    margin: 0;
-    color: #6c757d;
+  margin: 0;
+  font-size: 14px;
 }
 
-main.content {
-    padding: 20px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-main.content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
-main.content table th,
-main.content table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+table th {
+  background-color: #f4f4f4;
 }
-
-main.content table th {
-    background-color: #007bff;
-    color: white;
-}
-
-main.content table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-main.content table tr:hover {
-    background-color: #ddd;
-}
-
-
