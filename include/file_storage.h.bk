@@ -1,0 +1,19 @@
+#ifndef FILE_STORAGE_H
+#define FILE_STORAGE_H
+
+#include <stdio.h>
+#include <string.h>
+#include "esp_spiffs.h"
+#include "esp_log.h"
+
+// SPIFFS Initialization
+void init_storage(void);
+
+// Save data to file
+void save_data_to_file(const char *filename, const char *data);
+
+// Read data from a file (for debugging or future extensions)
+void read_data_from_file(const char *filename);
+
+#endif // FILE_STORAGE_H
+

@@ -1,0 +1,103 @@
+menu "Wi-Fi Configuration"
+
+config ESP_WIFI_SSID
+    string "Wi-Fi SSID"
+    default "mirzaGhalib"
+    help
+        Enter the Wi-Fi SSID to connect to.
+
+config ESP_WIFI_PASSWORD
+    string "Wi-Fi Password"
+    default "mypassword"
+    help
+        Enter the Wi-Fi password.
+
+config ESP_MAXIMUM_RETRY
+    int "Maximum Retry Attempts"
+    default 5
+    help
+        Set the maximum number of retry attempts for Wi-Fi connection.
+
+choice ESP_WIFI_AUTH_MODE
+    prompt "Wi-Fi Auth Mode"
+    default ESP_WIFI_AUTH_MODE_WPA_WPA2_PSK
+    help
+        Set the Wi-Fi authentication mode.
+
+    config ESP_WIFI_AUTH_MODE_OPEN
+        bool "Open"
+    config ESP_WIFI_AUTH_MODE_WEP
+        bool "WEP"
+    config ESP_WIFI_AUTH_MODE_WPA_PSK
+        bool "WPA_PSK"
+    config ESP_WIFI_AUTH_MODE_WPA2_PSK
+        bool "WPA2_PSK"
+    config ESP_WIFI_AUTH_MODE_WPA_WPA2_PSK
+        bool "WPA_WPA2_PSK"
+endchoice
+
+endmenu
+
+menu "LED Configuration"
+
+choice BLINK_LED
+    prompt "Blink LED type"
+    default BLINK_LED_GPIO
+    help
+        Select the LED type. A normal level-controlled LED or an addressable LED strip.
+
+    config BLINK_LED_GPIO
+        bool "GPIO"
+    config BLINK_LED_STRIP
+        bool "LED strip"
+endchoice
+
+choice BLINK_LED_STRIP_BACKEND
+    depends on BLINK_LED_STRIP
+    prompt "LED strip backend peripheral"
+    default BLINK_LED_STRIP_BACKEND_RMT if SOC_RMT_SUPPORTED
+    default BLINK_LED_STRIP_BACKEND_SPI
+    help
+        Select the backend peripheral to drive the LED strip.
+
+    config BLINK_LED_STRIP_BACKEND_RMT
+        depends on SOC_RMT_SUPPORTED
+        bool "RMT"
+    config BLINK_LED_STRIP_BACKEND_SPI
+        bool "SPI"
+endchoice
+
+config ENV_GPIO_RANGE_MIN
+    int
+    default 0
+
+config ENV_GPIO_RANGE_MAX
+    int
+    default 30
+    help
+        GPIO range for the ESP32C6. Adjust as per your board's specifications.
+
+config ENV_GPIO_IN_RANGE_MAX
+    int
+    default ENV_GPIO_RANGE_MAX
+
+config ENV_GPIO_OUT_RANGE_MAX
+    int
+    default ENV_GPIO_RANGE_MAX
+
+config BLINK_GPIO
+    int "Blink GPIO number"
+    range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+    default 8
+    help
+        GPIO number (IOxx) to blink on and off the LED.
+        Use this for normal GPIO LEDs or LED strips.
+
+config BLINK_PERIOD
+    int "Blink period in ms"
+    range 10 3600000
+    default 1000
+    help
+        Define the blinking period in milliseconds.
+
+endmenu
