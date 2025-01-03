@@ -5,9 +5,17 @@
 
 typedef enum {
     LED_STATE_OFF,
+    LED_STATE_ON,
     LED_STATE_CONNECTING,
     LED_STATE_CONNECTED,
-    LED_STATE_FAILED
+    LED_STATE_CONNECTED_NO_IP,
+    LED_STATE_WEBSERVER_STARTING,
+    LED_STATE_WEBSERVER_RUNNING,
+    LED_STATE_WEBSERVER_STOPPED,
+    LED_STATE_CLIENT_CONNECTED,
+    LED_STATE_FAILED,
+    LED_STATE_DATA_TRANSFER,  // Future state
+    // Add more states as needed
 } led_state_t;
 
 void configure_led();

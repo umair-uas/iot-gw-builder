@@ -4,51 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT Gateway</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="navbar">
+    <div class="navbar">
+        <h1><i class="fas fa-network-wired"></i> IoT Gateway Controller</h1>
         <nav>
-            <h1>IoT Gateway</h1>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/status">Status</a></li>
-                <li><a href="/clients">Clients</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Status</a></li>
+                <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="clients.html"><i class="fas fa-users"></i> Clients</a></li>
+                <li><a href="led_control.html"><i class="fas fa-lightbulb"></i> LED Control</a></li>
+                <li><a href="#" id="theme-toggle"><i class="fas fa-adjust"></i> Toggle Theme</a></li>
             </ul>
         </nav>
-    </header>
-    <main class="hero">
-        <h1>Welcome to IoT Gateway</h1>
-        <p>Monitor and manage your devices with ease.</p>
-    </main>
-    <section class="container">
-        <div class="card">
-            <h2>System Info</h2>
-            <p>Uptime: <strong id="uptime">Fetching...</strong></p>
-            <p>Free Heap: <strong id="heap">Fetching...</strong></p>
-            <p>Chip: <strong id="chip">Fetching...</strong></p>
-            <p>Revision: <strong id="revision">Fetching...</strong></p>
-            <p>Features: <strong id="features">Fetching...</strong></p>
-            <p>Flash Size: <strong id="flash">Fetching...</strong></p>
-            <div id="system_error" class="error-message" style="display:none;"></div>
-        </div>
-        <div class="card">
-            <h2>Wi-Fi Status</h2>
-            <p>SSID: <strong id="wifi_ssid">Fetching...</strong></p>
-            <p>IP: <strong id="wifi_ip">Fetching...</strong></p>
-            <p>RSSI: <strong id="wifi_rssi">Fetching...</strong></p>
-            <div id="wifi_error" class="error-message" style="display:none;"></div>
-        </div>
-        <div class="card">
-            <h2>Clients</h2>
-            <p><strong id="client_count">Fetching...</strong> Clients Connected</p>
-            <a href="/clients" class="btn">View Details</a>
-            <div id="clients_error" class="error-message" style="display:none;"></div>
-        </div>
-    </section>
+    </div>
+    <div class="container">
+        <h3>System Info</h3>
+        <ul>
+            <li><strong>Wi-Fi:</strong> Connected</li>
+            <li><strong>IP Address:</strong> 192.168.0.109</li>
+            <li><strong>Uptime:</strong> 2 hours, 35 minutes</li>
+        </ul>
+    </div>
     <footer>
-        <p>&copy; 2024 IoT Gateway | Designed with ❤️</p>
+        <p>&copy; 2024 IoT Control</p>
     </footer>
-    <script src="/js/app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

@@ -42,3 +42,8 @@ compile_commands.json
 .DS_Store
 Thumbs.db
 
+project_relevant_files.tar.gz
+certs/**
+html/assets/**
+html/requirements.txt
+main/https_server.c.old

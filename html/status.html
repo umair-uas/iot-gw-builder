@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Status - IoT Gateway</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Status</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="navbar">
+        <h1 class="page-title"><i class="fas fa-home"></i> Device Status</h1>
         <nav>
-            <h1>IoT Gateway</h1>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/status">Status</a></li>
-                <li><a href="/clients">Clients</a></li>
-                <li><a href="/settings">Settings</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Status</a></li>
+                <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="clients.html"><i class="fas fa-users"></i> Clients</a></li>
+                <li><a href="led_control.html"><i class="fas fa-lightbulb"></i> LED Control</a></li>
             </ul>
         </nav>
     </header>
-    <main class="content">
-        <h2>System Status</h2>
-        <p>Chip: <strong id="chip">Fetching...</strong></p>
-        <p>Revision: <strong id="revision">Fetching...</strong></p>
-        <p>Features: <strong id="features">Fetching...</strong></p>
-        <p>Flash Size: <strong id="flash">Fetching...</strong></p>
-        <p>Uptime: <strong id="uptime">Fetching...</strong></p>
-        <p>Free Heap: <strong id="heap">Fetching...</strong></p>
+    <main class="container">
+        <h2 class="section-title">System Status</h2>
+        <div class="status-panel">
+            <h3 class="panel-title">Current Info</h3>
+            <ul class="status-list">
+                <li><strong>Wi-Fi:</strong> Connected</li>
+                <li><strong>IP Address:</strong> 192.168.0.109</li>
+                <li><strong>Uptime:</strong> 2 hours, 35 minutes</li>
+                <li><strong>Signal Strength:</strong> Excellent</li>
+            </ul>
+        </div>
+        <div class="status-panel">
+            <h3 class="panel-title">Device Metrics</h3>
+            <ul class="status-list">
+                <li><strong>CPU Usage:</strong> 32%</li>
+                <li><strong>Memory Usage:</strong> 78%</li>
+                <li><strong>Temperature:</strong> 40°C</li>
+            </ul>
+        </div>
     </main>
-    
-    <footer>
-        <p>&copy; 2024 IoT Gateway | Designed with ❤️</p>
+    <footer class="footer">
+        <p>&copy; 2025 IoT Gateway Controller. All rights reserved.</p>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

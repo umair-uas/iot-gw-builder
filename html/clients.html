@@ -3,47 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clients - IoT Gateway</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Clients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="navbar">
+        <h1 class="page-title"><i class="fas fa-users"></i> Connected Clients</h1>
         <nav>
-            <h1>IoT Gateway</h1>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/status">Status</a></li>
-                <li><a href="/clients">Clients</a></li>
-                <li><a href="/settings">Settings</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Status</a></li>
+                <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="clients.html" class="active"><i class="fas fa-users"></i> Clients</a></li>
+                <li><a href="led_control.html"><i class="fas fa-lightbulb"></i> LED Control</a></li>
             </ul>
         </nav>
     </header>
-    <main class="content">
-        <h2>Connected Clients</h2>
-        <table>
+    <main class="container">
+        <h2 class="section-title">Connected Devices</h2>
+        <table class="clients-table">
             <thead>
                 <tr>
-                    <th>Client Name</th>
+                    <th>Name</th>
                     <th>IP Address</th>
-                    <th>Connection Time</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Device1</td>
+                    <td>Device 1</td>
                     <td>192.168.0.101</td>
-                    <td>1 Hour</td>
+                    <td>Online</td>
                 </tr>
                 <tr>
-                    <td>Device2</td>
+                    <td>Device 2</td>
                     <td>192.168.0.102</td>
-                    <td>30 Minutes</td>
+                    <td>Online</td>
+                </tr>
+                <tr>
+                    <td>Device 3</td>
+                    <td>192.168.0.103</td>
+                    <td>Offline</td>
                 </tr>
             </tbody>
         </table>
     </main>
-    <footer>
-        <p>&copy; 2024 IoT Gateway | Designed with ❤️</p>
+    <footer class="footer">
+        <p>&copy; 2025 IoT Gateway Controller. All rights reserved.</p>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Control</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i class="fas fa-network-wired"></i> IoT Gateway Controller</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Status</a></li>
+                <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="clients.html"><i class="fas fa-users"></i> Clients</a></li>
+                <li><a href="led_control.html" class="active"><i class="fas fa-lightbulb"></i> LED Control</a></li>
+                <li><a href="#" id="theme-toggle"><i class="fas fa-adjust"></i> Toggle Theme</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="color-picker">
+            <h3>Pick a Color</h3>
+            <input type="color" id="ledColor" value="#ffffff">
+        </div>
+        <div class="brightness-slider">
+            <h3>Adjust Brightness</h3>
+            <input type="range" id="ledBrightness" min="0" max="100" value="50">
+            <p>Brightness: <span id="brightnessValue">50</span>%</p>
+        </div>
+        <div class="control-buttons">
+            <button id="turnOnButton" class="btn-primary"><i class="fas fa-power-off"></i> Turn On</button>
+            <button id="turnOffButton" class="btn-danger"><i class="fas fa-power-off"></i> Turn Off</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 IoT Gateway Controller. All rights reserved.</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
